@@ -38,3 +38,38 @@ echo "i ", i  # outputs "i 3"
 h = 42        # changes `h` to 42 without changing `i`
 echo "h ", h  # outputs "h 42"
 echo "i ", i  # outputs "i 3"
+
+# 定数
+const 
+    j = "abc"
+    k = 2
+    l = k + 2
+# j = "efg" ## ここはエラーになる
+
+# let
+let m = "abc" # 
+# m = "efg" # エラーになる
+# const input = readLine(stdin) # これはダメ
+# let input = readLine(stdin) # こっちはおk
+
+# 制御フロー
+# if文
+let name = readLine(stdin)
+if name == "":
+    echo "Poor soul, you lost your name?"
+elif name == "name":
+    echo "Very funny, your name is name."
+else:
+    echo "Hi, ", name, "!"
+
+# case文
+let name_case = readLine(stdin)
+case name_case
+of "":
+    echo "Poor soul, you lost your name?"
+of "name":
+    echo "Very funny, your name is name."
+of "Dave", "Frank":
+    echo "Cool name!"
+else:
+    echo "Hi ", name_case, "!"
